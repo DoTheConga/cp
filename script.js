@@ -79,3 +79,24 @@ $('.container').on('touchend', function (event) {
         backward();
     }
 })
+
+$(document).ready(function () {
+    $('.carousel').bxSlider({
+        minSlides: 2,
+        maxSlides: 6,
+        slideWidth: 900,
+        slideMargin: 20
+    });
+        
+});
+
+function handle() {
+    let inputs = document.querySelectorAll("input");
+    let input_values = [];
+    for (let i = 0; i < inputs.length; i++) {
+        input_values.push(inputs[i].value);
+    }
+}
+
+let button = document.querySelector('.btn');
+button.addEventListener('click', handle);
